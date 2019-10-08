@@ -7,49 +7,40 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-</head>
-<body>
-    <header>
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Вход", "Login", "Home")</li>
-                        <li>@Html.ActionLink("Новости", "News", "Home")</li>
-                        <li>@Html.ActionLink("Профиль", "Profile", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="container body-content">
-        @RenderBody()
-    </main>
-    <footer>
-        <div class="navbar navbar-inverse navbar-fixed-bottom">
-            <div class="container">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Вход", "Login", "Home")</li>
-                        <li>@Html.ActionLink("Новости", "News", "Home")</li>
-                        <li>@Html.ActionLink("Профиль", "Profile", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/site")
+</head>
+<body class="row p-0 m-0">
+    <div class="content col-12">
+        <header class="bg-light text-white row p-2">
+            <div class="col-md-6 text-center">
+                <div class="btn btn-outline-success index_page">@Html.ActionLink("Главная", "Index", "Home")</div>
+                <div class="btn btn-outline-success login_page">@Html.ActionLink("Вход", "Login", "Home")</div>
+                <div class="btn btn-outline-success news_page">@Html.ActionLink("Новости", "News", "Home")</div>
+                <div class="btn btn-outline-success profile_page">@Html.ActionLink("Профиль", "Profile", "Home")</div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-2">
+                    <div class="col-12 text-right p-2"><span class="bg-success p-2 rounded" id="login_on"></span></div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 text-right"> <button class="btn btn-primary" id="login_off" onclick="login_off();" style="display:none;">Выйти</button></div>
+                </div>
+            </div>
+        </header>
+        <main class="row content-main justify-content-center align-items-center">
+            @RenderBody()
+        </main>
+        <footer class="bg-light row text-white text-center">
+            <div class="col-12 text-center p-2">
+                <div class="btn btn-outline-success index_page">@Html.ActionLink("Главная", "Index", "Home")</div>
+                <div class="btn btn-outline-success login_page">@Html.ActionLink("Вход", "Login", "Home")</div>
+                <div class="btn btn-outline-success news_page">@Html.ActionLink("Новости", "News", "Home")</div>
+                <div class="btn btn-outline-success profile_page">@Html.ActionLink("Профиль", "Profile", "Home")</div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

@@ -19,15 +19,27 @@ namespace WebApplication2
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/login").Include(
-                        "~/Scripts/login.js"));
-
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/site").Include(
+                      "~/Scripts/site.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/index").Include(
+                       "~/Scripts/index.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/login").Include(
+                       "~/Scripts/login.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/news").Include(
+                        "~/Scripts/news.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/profile").Include(
+                        "~/Scripts/profile.js"));
         }
     }
 }

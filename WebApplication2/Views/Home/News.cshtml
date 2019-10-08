@@ -1,17 +1,40 @@
 ﻿@{
     ViewBag.Title = "Новости";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+@Scripts.Render("~/bundles/news")
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="col-12">
+    <div class="row  justify-content-center">
+        <h2 class="col-12 mb-2 text-center">@ViewBag.Title.</h2>
+        <h3 class="col-12 mb-4 text-center">@ViewBag.Message</h3>
+        <div class="col-md-3">
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div> <div class="row mb-2">
+                <div class="col-12">1 Новость</div>
+            </div>
+        </div>
+    </div>
+</div>

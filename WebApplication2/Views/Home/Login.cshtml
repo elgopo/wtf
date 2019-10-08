@@ -4,18 +4,26 @@
 
 @Scripts.Render("~/bundles/login")
 
-<div class="row">
-    <h2 class="col-12">@ViewBag.Title.</h2>
-    <h3 class="col-12">@ViewBag.Message</h3>
-    <div class="col-12">
-        <div class="form-group">
-            <label for="exampleInputEmail1" class="mb-3">Логин</label>
-            <input type="email" class="form-control" id="login" aria-describedby="emailHelp" placeholder="Введите логин">
+<div class="col-12">
+    <div class="row justify-content-center">
+        <h2 class="col-12 mb-2 text-center">@ViewBag.Title.</h2>
+        <h3 class="col-12 mb-2 text-center">@ViewBag.Message</h3>
+        <div class="col-md-3">
+            <div class="row mb-2">
+                <label for="login" class="col-12 font-weight-bold">Логин</label>
+                <div class="col-12">
+                    <input type="email" class="form-control" id="login" aria-describedby="emailHelp" placeholder="Введите логин">
+                </div>
+            </div>
+            <div class="row mb-4">
+                <label class="col-12 font-weight-bold" for="password">Пароль</label>
+                <div class="col-12">
+                    <input type="password" class="form-control" id="password" placeholder="Введите пароль">
+                </div>
+            </div>
+            <div class="row px-3">
+               <button type="submit" class="btn btn-primary col-12"  onclick="login()">Войти</button>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Пароль</label>
-            <input type="password" class="form-control" id="password" placeholder="Введите пароль">
-        </div>
-        <button type="submit" class="btn btn-primary">Войти</button>
     </div>
 </div>
